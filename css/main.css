@@ -162,7 +162,7 @@ body {
 }
 
 .contaner {
-  width: 1640px;
+  width: 980px;
   margin: 0 auto;
   padding: 0;
 }
@@ -180,7 +180,7 @@ body {
   justify-content: center;
   height: 72px;
   border-radius: 48px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 24px;
   line-height: 133%;
   text-transform: uppercase;
