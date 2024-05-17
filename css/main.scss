@@ -344,6 +344,10 @@ h3{
     margin-bottom: 48px;
 }
 .line-wrap {
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    gap: 16px;
 }
 .line {
     display: flex;
@@ -373,6 +377,7 @@ h3{
         }
         &_long{
             height: 220px;
+            min-height: 220px;
             border-radius: 50px;
             display: flex;
             align-items: flex-start;  
@@ -399,12 +404,51 @@ h3{
     }
 }
 .blog {
-    &__wrap {}
-    &__inner {}
+    width: 530px;
+    &__wrap {
+        border: 3px solid #478bf9;
+        border-radius: 100px;
+        padding: 24px;
+        background: rgba(255, 255, 255, 0.12);
+        height: 600px;
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        height: 100%;
+        overflow: hidden;
+    }
     &__item {}
-    &__link {}
-    &__desc {}
-    &__date {}
+    &__link {
+        display: block;
+        color: var(--white);
+        border-radius: 196px;
+        padding: 24px 64px;
+        background: #1e1231;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 117%;
+    }
+    &__desc {
+        display: block;
+        margin-bottom: 14px;
+    }
+    &__date {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 114%;
+        color: rgba(255, 255, 255, 0.6);
+        display: block;
+    }
+}
+h2{
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-bottom: 24px;
 }
 .footer {
     &__container {}
