@@ -349,6 +349,7 @@ h3{
     display: flex;
     flex-direction: column;
     gap: 22px;
+    width: 100px;
     &__item {
         &_white{
             .line__pic{
@@ -372,17 +373,29 @@ h3{
         }
         &_long{
             height: 220px;
-            box-shadow: 0 0 0 3px inset var(--white);
             border-radius: 50px;
-            .line__pic{
-                //margin: -3px -3px 0;
+            display: flex;
+            align-items: flex-start;  
+            &-top{
+                align-items: flex-end; 
             }
+            &.line__item_white{
+                box-shadow: 0 0 0 3px inset var(--white);
+            }
+            &.line__item_green{
+                box-shadow: 0 0 0 3px inset var(--green);
+            }
+            &.line__item_blue{
+                box-shadow: 0 0 0 3px inset var(--blue);
+            }
+            &.line__item_lightblue{
+                box-shadow: 0 0 0 3px inset var(--lightblue);
+            }        
         }
     }
     &__pic {
-        width: 100px;
-        height: 100px;
-        
+        width: 100%;
+        aspect-ratio: 1/1;
     }
 }
 .blog {

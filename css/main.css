@@ -349,6 +349,7 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 22px;
+  width: 100px;
 }
 .line__item_white .line__pic {
   fill: var(--white);
@@ -364,12 +365,28 @@ h3 {
 }
 .line__item_long {
   height: 220px;
-  box-shadow: 0 0 0 3px inset var(--white);
   border-radius: 50px;
+  display: flex;
+  align-items: flex-start;
+}
+.line__item_long-top {
+  align-items: flex-end;
+}
+.line__item_long.line__item_white {
+  box-shadow: 0 0 0 3px inset var(--white);
+}
+.line__item_long.line__item_green {
+  box-shadow: 0 0 0 3px inset var(--green);
+}
+.line__item_long.line__item_blue {
+  box-shadow: 0 0 0 3px inset var(--blue);
+}
+.line__item_long.line__item_lightblue {
+  box-shadow: 0 0 0 3px inset var(--lightblue);
 }
 .line__pic {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 
 @media only screen and (max-width: 1700px) {
