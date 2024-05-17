@@ -158,16 +158,10 @@ body {
     flex: 1 0 auto;
 }
 
-.contaner {
+.container {
     width: 980px;
     margin: 0 auto;
     padding: 0;
-}
-.btn-ac {
-    padding: 50px 0 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .btn {
     display: inline-flex;
@@ -227,7 +221,13 @@ body {
 .wow {
     visibility: hidden;
 }
-
+.contact__socpic{
+    fill: #478BF9;
+    transition: var(--transition);
+    &:hover{
+        fill: #6CA2FA;
+    }
+}
 
 
 

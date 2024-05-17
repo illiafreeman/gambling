@@ -161,17 +161,10 @@ body {
   flex: 1 0 auto;
 }
 
-.contaner {
+.container {
   width: 980px;
   margin: 0 auto;
   padding: 0;
-}
-
-.btn-ac {
-  padding: 50px 0 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .btn {
@@ -231,6 +224,14 @@ body {
 
 .wow {
   visibility: hidden;
+}
+
+.contact__socpic {
+  fill: #478BF9;
+  transition: var(--transition);
+}
+.contact__socpic:hover {
+  fill: #6CA2FA;
 }
 
 @media only screen and (max-width: 1700px) {
