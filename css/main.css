@@ -132,6 +132,8 @@ table td {
   --transitionbtn: all 0.8s cubic-bezier(.4,0,.2,1);
   --white: #fff;
   --blue: #478bf9;
+  --green: #7DDACF;
+  --lightblue: #9DADF2;
   --darkblue: #3a74d1;
 }
 
@@ -155,11 +157,6 @@ body {
 
 .oh {
   overflow: hidden;
-}
-
-.main {
-  padding-top: 120px;
-  flex: 1 0 auto;
 }
 
 .container {
@@ -225,14 +222,6 @@ body {
 
 .wow {
   visibility: hidden;
-}
-
-.line__pic {
-  fill: #478BF9;
-  transition: var(--transition);
-}
-.line__pic:hover {
-  fill: #6CA2FA;
 }
 
 .header {
@@ -320,6 +309,67 @@ body {
 }
 .btn_lang-min {
   display: none;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+.main__inner {
+  display: flex;
+  gap: 64px;
+  height: 960px;
+  align-items: center;
+}
+
+.intro {
+  width: 670px;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 96px;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+h1 span {
+  display: block;
+  color: var(--blue);
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 48px;
+}
+
+.line {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.line__item_white .line__pic {
+  fill: var(--white);
+}
+.line__item_green .line__pic {
+  fill: var(--green);
+}
+.line__item_blue .line__pic {
+  fill: var(--blue);
+}
+.line__item_lightblue .line__pic {
+  fill: var(--lightblue);
+}
+.line__item_long {
+  height: 220px;
+  box-shadow: 0 0 0 3px inset var(--white);
+  border-radius: 50px;
+}
+.line__pic {
+  width: 100px;
+  height: 100px;
 }
 
 @media only screen and (max-width: 1700px) {

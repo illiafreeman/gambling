@@ -130,6 +130,8 @@ table td {
     --transitionbtn: all 0.8s cubic-bezier(.4,0,.2,1);
     --white: #fff;
     --blue: #478bf9;
+    --green: #7DDACF;
+    --lightblue: #9DADF2;
     --darkblue: #3a74d1;
 }
 
@@ -153,12 +155,6 @@ body {
 .oh{
     overflow: hidden;
 }
-
-.main {
-    padding-top: 120px;
-    flex: 1 0 auto;
-}
-
 .container {
     width: 1640px;
     margin: 0 auto;
@@ -223,11 +219,7 @@ body {
     visibility: hidden;
 }
 .line__pic{
-    fill: #478BF9;
-    transition: var(--transition);
-    &:hover{
-        fill: #6CA2FA;
-    }
+    
 }
 .header {
     padding-top: 16px;
@@ -320,16 +312,78 @@ body {
 .hamburger {
 }
 .main {
+    flex: 1 0 auto;
+    &__inner{
+        display: flex;
+        gap: 64px;
+        height: 960px;
+        align-items: center;
+    }
 }
 .article {
 }
 .intro {
+    width: 670px;
+}
+h1{
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    span{
+        display: block;
+        color: var(--blue);
+    }
+}
+h3{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 48px;
 }
 .line-wrap {
 }
 .line {
-    &__item {}
-    &__pic {}
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    &__item {
+        &_white{
+            .line__pic{
+                fill: var(--white);
+            }
+        }
+        &_green{
+            .line__pic{
+                fill: var(--green);
+            }
+        }
+        &_blue{
+            .line__pic{
+                fill: var(--blue);
+            }
+        }
+        &_lightblue{
+            .line__pic{
+                fill: var(--lightblue); 
+            }
+        }
+        &_long{
+            height: 220px;
+            box-shadow: 0 0 0 3px inset var(--white);
+            border-radius: 50px;
+            .line__pic{
+                //margin: -3px -3px 0;
+            }
+        }
+    }
+    &__pic {
+        width: 100px;
+        height: 100px;
+        
+    }
 }
 .blog {
     &__wrap {}
