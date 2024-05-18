@@ -151,6 +151,7 @@ body {
     line-height: 1.25;
     font-optical-sizing: auto;
     font-style: normal;
+    position: relative;
 }
 .oh{
     overflow: hidden;
@@ -318,7 +319,19 @@ body {
         gap: 64px;
         height: 960px;
         align-items: center;
+        position: relative;
     }
+}
+.shadow{
+    position: fixed;
+    right: 0;
+    pointer-events: none;
+}
+.shadow_2{
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
 }
 .article {
 }
@@ -349,11 +362,20 @@ h3{
     display: flex;
     gap: 16px;
 }
+@keyframes scroll {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(calc(-100% - 20px));
+    }
+}
 .line {
     display: flex;
     flex-direction: column;
     gap: 22px;
     width: 100px;
+    //animation: scroll 28s linear infinite;
     &__item {
         &_white{
             .line__pic{
@@ -379,7 +401,8 @@ h3{
             aspect-ratio: 1/2;
             border-radius: 50px;
             display: flex;
-            align-items: flex-start;  
+            align-items: flex-start; 
+            flex: 1 0 auto; 
             &-top{
                 align-items: flex-end; 
             }
@@ -454,12 +477,60 @@ h2{
     text-transform: uppercase;
     margin-bottom: 24px;
 }
+
 .footer {
-    &__container {}
-    &__nav {}
+    border: 4px solid var(--blue);
+    border-bottom: 0;
+    border-radius: 64px 64px 0 0;
+    padding: 0 0 24px;
+    height: 130px;
+    display: flex;
+    align-items: flex-end;
+    background: #1e1231;
+    h4{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 125%;
+        margin-bottom: 14px;
+        text-align: right;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__nav {
+        display: flex;
+        gap: 40px;
+    }
     &__nav-item {}
-    &__nav-link {}
-    &__soc {}
+    &__nav-link {
+        color: var(--white);
+        position: relative;
+        transition: var(--transition);
+        &:before {
+            content: "";
+            height: 1px;
+            position: absolute;
+            bottom: -2px;
+            width: 100%;
+            right: 0;
+            width: 0;
+            background: var(--blue);
+            transition: var(--transition);
+        }
+        &:hover{
+            color: var(--blue);
+            &:before {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+    &__soc {
+        position: relative;
+        z-index: 10;
+    }
     &__soc-title {}
     &__soc-list {
         display: flex;
@@ -470,7 +541,6 @@ h2{
         display: flex;
         align-items: center;
         justify-content: center;
-        
         width: 32px;
         height: 32px;
         position: relative;
