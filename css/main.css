@@ -403,7 +403,7 @@ h3 {
 .blog__wrap {
   border: 3px solid #478bf9;
   border-radius: 100px;
-  padding: 24px;
+  padding: 24px 40px 24px 24px;
   background: rgba(255, 255, 255, 0.12);
   height: 600px;
 }
@@ -414,7 +414,7 @@ h3 {
   height: 100%;
   overflow: hidden;
 }
-.blog__link {
+.blog__item-inner {
   display: block;
   color: var(--white);
   border-radius: 196px;
@@ -423,6 +423,9 @@ h3 {
   font-weight: 400;
   font-size: 24px;
   line-height: 117%;
+}
+.blog__link {
+  background: var(--blue);
 }
 .blog__desc {
   display: block;
@@ -445,10 +448,31 @@ h2 {
   margin-bottom: 24px;
 }
 
+.simplebar-mask {
+  border-radius: 100px;
+}
+
+.simplebar-track.simplebar-vertical {
+  right: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  top: 100px;
+  bottom: 100px;
+  width: 8px;
+  border-radius: 4px;
+}
+
 .simplebar-scrollbar:before {
   opacity: 1;
   background: var(--blue);
-  top: 100px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 4px;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 1700px) {

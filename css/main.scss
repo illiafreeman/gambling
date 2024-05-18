@@ -408,7 +408,7 @@ h3{
     &__wrap {
         border: 3px solid #478bf9;
         border-radius: 100px;
-        padding: 24px;
+        padding: 24px 40px 24px 24px;
         background: rgba(255, 255, 255, 0.12);
         height: 600px;
     }
@@ -419,16 +419,21 @@ h3{
         height: 100%;
         overflow: hidden;
     }
-    &__item {}
-    &__link {
-        display: block;
-        color: var(--white);
-        border-radius: 196px;
-        padding: 24px 64px;
-        background: #1e1231;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 117%;
+    &__item {
+        &-inner {
+            display: block;
+            color: var(--white);
+            border-radius: 196px;
+            padding: 24px 64px;
+            background: #1e1231;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 117%;
+        }
+
+    }
+    &__link{
+        background: var(--blue);
     }
     &__desc {
         display: block;
@@ -461,12 +466,29 @@ h2{
     &__soc-item {}
     &__soc-link {}
 }
+.simplebar-mask{
+    border-radius: 100px;
+}
+.simplebar-track.simplebar-vertical{
+    right: 8px;
+    background: rgba(255, 255, 255, 0.12);
+    top: 100px;
+    bottom: 100px;
+    width: 8px;
+    border-radius: 4px;
+}
 .simplebar-scrollbar:before{
     opacity: 1;
     background: var(--blue);
-    top: 100px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 4px;
 }
-
+.simplebar-scrollbar.simplebar-visible:before{
+    opacity: 1;
+}
 
 
 
