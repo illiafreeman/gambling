@@ -461,6 +461,11 @@ h2{
     &__soc-item {}
     &__soc-link {}
 }
+.simplebar-scrollbar:before{
+    opacity: 1;
+    background: var(--blue);
+    top: 100px;
+}
 
 
 

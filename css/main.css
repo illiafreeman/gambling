@@ -445,6 +445,12 @@ h2 {
   margin-bottom: 24px;
 }
 
+.simplebar-scrollbar:before {
+  opacity: 1;
+  background: var(--blue);
+  top: 100px;
+}
+
 @media only screen and (max-width: 1700px) {
   .contaner {
     width: 100%;
