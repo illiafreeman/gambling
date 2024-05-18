@@ -380,6 +380,12 @@ h3 {
   flex-direction: column;
   gap: 22px;
   width: 100px;
+  animation: scroll 4s linear infinite;
+}
+.line-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
 .line__item_white .line__pic {
   fill: var(--white);

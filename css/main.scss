@@ -375,7 +375,12 @@ h3{
     flex-direction: column;
     gap: 22px;
     width: 100px;
-    //animation: scroll 28s linear infinite;
+    animation: scroll 4s linear infinite;
+    &-inner{
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
     &__item {
         &_white{
             .line__pic{
