@@ -380,6 +380,21 @@ h3{
         transform: translateY(0);
     }
 }
+.line-inner_1{
+    .line{
+        animation: scroll 90s linear infinite;
+    }
+}
+.line-inner_2{
+    .line{
+        animation: scroll_invert 120s linear infinite;
+    }
+}
+.line-inner_3{
+    .line{
+        animation: scroll 150s linear infinite;
+    }
+}
 .line {
     display: flex;
     flex-direction: column;
@@ -391,21 +406,15 @@ h3{
         gap: 22px;
         &_1{
             opacity: .2;
-            .line{
-                animation: scroll 50s linear infinite;
-            }
+            
         }
         &_2{
             opacity: .6;
-            .line{
-                animation: scroll_invert 20s linear infinite;
-            }
+            
         }
         &_3{
             opacity: .4;
-            .line{
-                animation: scroll 5s linear infinite;
-            }
+            
         }
     }
     &-wrap{

@@ -384,6 +384,18 @@ h3 {
     transform: translateY(0);
   }
 }
+.line-inner_1 .line {
+  animation: scroll 90s linear infinite;
+}
+
+.line-inner_2 .line {
+  animation: scroll_invert 120s linear infinite;
+}
+
+.line-inner_3 .line {
+  animation: scroll 150s linear infinite;
+}
+
 .line {
   display: flex;
   flex-direction: column;
@@ -398,20 +410,11 @@ h3 {
 .line-inner_1 {
   opacity: 0.2;
 }
-.line-inner_1 .line {
-  animation: scroll 50s linear infinite;
-}
 .line-inner_2 {
   opacity: 0.6;
 }
-.line-inner_2 .line {
-  animation: scroll_invert 20s linear infinite;
-}
 .line-inner_3 {
   opacity: 0.4;
-}
-.line-inner_3 .line {
-  animation: scroll 5s linear infinite;
 }
 .line-wrap {
   position: relative;
