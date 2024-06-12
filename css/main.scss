@@ -361,18 +361,19 @@ h3{
     height: 100%;
     display: flex;
     gap: 16px;
+    flex: 1 0 auto;;
 }
 @keyframes scroll {
     from {
         transform: translateY(0);
     }
     to {
-        transform: translateY(calc(-100% - 20px));
+        transform: translateY(calc(-100% - 22px));
     }
 }
 @keyframes scroll_invert {
     from {
-        transform: translateY(calc(-100% - 20px));
+        transform: translateY(calc(-100% - 22px));
         
     }
     to {
@@ -384,7 +385,6 @@ h3{
     flex-direction: column;
     gap: 22px;
     width: 100px;
-    
     &-inner{
         display: flex;
         flex-direction: column;
@@ -404,7 +404,7 @@ h3{
         &_3{
             opacity: .4;
             .line{
-                animation: scroll 20s linear infinite;
+                animation: scroll 5s linear infinite;
             }
         }
     }
@@ -423,6 +423,10 @@ h3{
         }
     }
     &__item {
+        
+        svg{
+            display: block;
+        }
         &_white{
             .line__pic{
                 fill: var(--white);
